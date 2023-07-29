@@ -1,18 +1,16 @@
-"use client";
+'use client'
 
-import React, { useContext } from "react";
-import { HambuguerMenu } from "../hambugerMenu";
-import SwitchMode from "../SwitchMode";
-import { ThemeContext } from "@/contexts/ThemeContext";
+import React, { useContext } from 'react'
+import { HambuguerMenu } from '../HambugerMenu'
+import SwitchMode from '../SwitchMode'
+import { ThemeContext } from '@/contexts/ThemeContext'
 
 export function Header() {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
   return (
-    <header className={`${!theme && "dark"}`}>
-      <div className="p-5 bg-white dark:bg-bgdark flex justify-between items-center md:justify-end md:dark:bg-gray-600 md:bg-gray-300 md:h-12">
-        <HambuguerMenu />
-        <SwitchMode />
-      </div>
+    <header className="z-20 flex items-center  justify-between bg-transparent  p-5 md:z-[100] md:h-12  md:justify-end md:bg-stone-300 md:dark:bg-neutral-700">
+      <HambuguerMenu />
+      <SwitchMode />
     </header>
-  );
+  )
 }
