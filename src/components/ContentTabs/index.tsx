@@ -21,7 +21,7 @@ export default function ContentTabs() {
   return (
     <div>
       <div className="mx-8 my-2">
-        <ul className="flex w-full justify-between">
+        <ul className="flex w-full justify-between ">
           <Tabs
             title="About"
             isSeleted={tabSeleted === 0}

@@ -7,7 +7,7 @@ interface ITab {
 export default function ({ title, isSeleted, onClick }: ITab) {
   return (
     <li
-      className={`font-semibol text-base text-slate-800 dark:text-neutral-50
+      className={`text-base font-semibold text-slate-800 dark:text-neutral-50 sm:text-sm
       ${
         isSeleted &&
         'border-b-4 border-slate-800 font-bold dark:border-neutral-50'

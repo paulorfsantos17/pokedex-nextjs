@@ -16,7 +16,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
       <html lang="pt-br">
-        <body className={`${openSans.className} h-full`}>
+        <body className={`${openSans.className} h-screen`}>
           <MainTheme children={children}></MainTheme>
         </body>
       </html>
