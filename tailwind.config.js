@@ -7,6 +7,7 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+  
     extend: {
       colors: {
         'primary-light':'#2C2E44',
@@ -17,8 +18,8 @@ module.exports = {
           'grass': '#78C850',
           'grass-border': '#297C00'
         }
-        
-      }
+      },
+    
     },
   },
   plugins: [],
