@@ -1,24 +1,37 @@
-import Image from "next/image";
-import React from "react";
-import { TagType } from "../TagType";
+import Image from 'next/image'
+import React from 'react'
+import { TagType } from '../TagType'
 
-export function Card() {
+export interface ICard {
+  name: string
+  id: string
+  image: string
+  types: string[]
+}
+
+export function Card({ name, id, image, types }: ICard) {
   return (
-    <div className="flex w-80 h-40 bg-type-grass rounded-lg items-center border-type-grass-border border-2d drop-shadow-lg max-w-[240px]">
+    <div className="flex h-40 w-80 max-w-[240px] items-center rounded-lg border-2  border-type-grass-border bg-type-grass px-1 pt-4 drop-shadow-lg ">
       <Image
-        className="mb-auto"
-        width={128}
-        height={118}
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png"
-        alt="pokemon"
+        className="mb-auto h-[80%]"
+        width={90}
+        height={70}
+        src={image}
+        alt={name}
       />
-      <div className="flex flex-col w-full p-4 h-full">
-        <p className="self-end text-sm text-white">#001</p>
-        <h3 className="text-white font-bold text-lg">Bulbasaur</h3>
-        <div>
-          <TagType />
+      <div className="flex h-full w-full flex-col p-4">
+        <p className="self-end text-sm  text-slate-800 dark:text-neutral-50">
+          #{id}
+        </p>
+        <h3 className="mb-2 text-lg font-bold capitalize text-slate-800 dark:text-neutral-50">
+          {name}
+        </h3>
+        <div className="flex flex-col gap-1">
+          {types.map((type) => (
+            <TagType type={type} key={type} />
+          ))}
         </div>
       </div>
     </div>
-  );
+  )
 }

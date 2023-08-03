@@ -1,7 +1,11 @@
-export function TagType() {
+interface ITagTypes {
+  type: string
+}
+
+export function TagType({ type }: ITagTypes) {
   return (
-    <div className="border-type-grass-border border-[1px] rounded-full w-16 h-5 flex justify-center">
-      <p className="text-type-grass-border capitalize text-[12px]">grass</p>
+    <div className="flex h-5 w-16 justify-center rounded-full border-[1px] border-type-grass-border">
+      <p className="text-[12px] capitalize text-type-grass-border">{type}</p>
     </div>
-  );
+  )
 }
