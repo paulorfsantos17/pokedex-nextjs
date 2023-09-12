@@ -7,20 +7,16 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-  
     extend: {
       colors: {
-        'primary-light':'#2C2E44',
-        'secondary-light':'#7d7d7d',
+        'primary-light': '#2C2E44',
+        'secondary-light': '#7d7d7d',
         'third-light': '#b4b4b4',
-        'checked-light' : '#D7E6EB',
-        type: {
-          'grass': '#78C850',
-          'grass-border': '#297C00'
-        }
-      },
-    
+        'checked-light': '#D7E6EB',
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }

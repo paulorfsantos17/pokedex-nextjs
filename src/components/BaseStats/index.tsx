@@ -1,15 +1,20 @@
 import React from 'react'
 import TagStats from '../TagStats'
+import { PokemonBaseStats } from '@/interfaces/PokemonView'
 
-export default function BaseStats() {
+interface IBaseStats {
+  baseStats: PokemonBaseStats
+}
+
+export default function BaseStats({ baseStats }: IBaseStats) {
   return (
     <div className="flex flex-col gap-3 p-10">
-      <TagStats stats={60} title="HP" />
-      <TagStats stats={80} title="ATK" />
-      <TagStats stats={80} title="HP" />
-      <TagStats stats={60} title="HP" />
-      <TagStats stats={60} title="HP" />
-      <TagStats stats={60} title="HP" />
+      <TagStats stats={baseStats.hp} title="HP" />
+      <TagStats stats={baseStats.atk} title="ATK" />
+      <TagStats stats={baseStats.def} title="DEF" />
+      <TagStats stats={baseStats.satk} title="SATK" />
+      <TagStats stats={baseStats.sdef} title="SDEF" />
+      <TagStats stats={baseStats.spd} title="SPD" />
     </div>
   )
 }

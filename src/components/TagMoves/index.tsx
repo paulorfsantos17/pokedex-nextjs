@@ -2,7 +2,7 @@ import React from 'react'
 
 interface ITagMoves {
   title: string
-  stats: number
+  stats: number | null
 }
 
 export default function TagMoves({ stats, title }: ITagMoves) {

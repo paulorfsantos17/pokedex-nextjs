@@ -8,8 +8,8 @@ interface ILabelInfo {
 export default function LabelInfo({ title, description }: ILabelInfo) {
   return (
     <div className="flex w-full justify-start gap-14 text-start text-slate-800 dark:text-neutral-50">
-      <h2 className="text-sm font-semibold  ">{title}</h2>
-      <p className="text-sm font-bold">{description}</p>
+      <h2 className="text-sm font-semibold capitalize">{title}</h2>
+      <p className="text-sm font-bold capitalize">{description}</p>
     </div>
   )
 }
